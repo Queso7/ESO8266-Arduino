@@ -4,7 +4,7 @@
 #define la 4
 #define lA 0
 #define rel 13
-time_t t;//time var
+time_t t;
 int inf, aux;
 void actb(){
 
@@ -24,13 +24,13 @@ void inwifi(){
     delay(200);
     digitalWrite(lv, HIGH);
     delay(200);
-}//in wifi 
+}
 void instat(){ 
   digitalWrite(lv,LOW);
   digitalWrite(lA,LOW);
   digitalWrite(la,LOW);
   digitalWrite(rel,HIGH);
-}//initial status initializate off all pins
+}
 void setup(){
   Serial.begin(115200);
   pinMode(lv, OUTPUT);
@@ -52,6 +52,6 @@ void loop(){
   }
   Serial.println(inf);
   Serial.println(WiFi.localIP());
-  Serial.println(asctime(localtime(&t)));//know the time in with the project on
+  Serial.println(asctime(localtime(&t)));
   delay(2000);
  } 
