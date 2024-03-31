@@ -28,9 +28,8 @@ void loop() {
   humedad = sensorDHT.readHumidity();
   temperaturaC = sensorDHT.readTemperature();
   if ( isnan(humedad) || isnan(temperaturaC)) {
-    return;   // Si hubo un error en la lectura, el programa sale,
-              // reiniciando la función loop,
-  }           // si no hubo error, el programa continúa.
+    return; 
+  }           
   lcd.clear();
   lcd.setCursor(0,0);
   lcd.print("Temperatura: ");
